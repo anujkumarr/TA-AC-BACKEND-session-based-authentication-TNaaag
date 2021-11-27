@@ -5,7 +5,6 @@ var bcrypt = require('bcrypt');
 
 
 router.get('/', function (req, res, next) {
-  console.log(req.session,"session")
   res.render('users');
 });
 
@@ -48,7 +47,7 @@ router.post("/login", (req, res, next) => {
 
       // persist logged in user information
       req.session.userId = user._id;
-      res.render("successfullLogin")
+      res.redirect("/dashboard")
 
     });
   })
@@ -61,7 +60,7 @@ router.post('/register', (req, res, next) => {
   User.create(req.body, (err, user) => {
     console.log(err, user)
     if (err) return next(err);
-    res.redirect('/users')
+    res.redirect('/users/login')
   })
 });
  
