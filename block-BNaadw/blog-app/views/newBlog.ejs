@@ -1,0 +1,13 @@
+<%- include('partial/header') %>
+<!--Main-->
+<main class="newBlog">
+  <form action="/blogs" method="POST">
+    <input type="text" name="title" placeholder="Enter Title Here..." />
+    <input type="text" name="author" placeholder="Enter Author Name Here..." />
+    <input type="text" name="tags" placeholder="Enter Tags Here..." />
+    <textarea name="description">
+Enter Description Here...
+    </textarea>
+    <input class="submit" type="submit" value="Submit" />
+  </form>
+</main>

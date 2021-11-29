@@ -1,0 +1,11 @@
+<%- include('partial/header') %>
+<!--Main-->
+<main class="login" style="text-align: center">
+  <form action="/users/register" method="POST">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="P@s$w0rd" />
+    <input type="number" name="phone" placeholder="Phone" />
+    <input type="submit" value="Register User" />
+  </form>
+</main>
